@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="722.0" prefWidth="993.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProfitController">
+   <children>
+      <Pane layoutX="-10.0" layoutY="-7.0" prefHeight="136.0" prefWidth="1026.0" style="-fx-background-color: #4a4fda;">
+         <children>
+            <Label layoutX="22.0" layoutY="12.0" style="-fx-background-color: #ffffff; -fx-background-radius: 40;">
+               <graphic>
+                  <ImageView fitHeight="117.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="214.0" layoutY="35.0" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="52.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="58.0" text="Welcome To SBITANY" textFill="WHITE">
+               <font>
+                  <Font name="Engravers MT" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableProfit" editable="true" layoutX="29.0" layoutY="185.0" prefHeight="418.0" prefWidth="948.0" styleClass="table" stylesheets="@../Style/Style.css">
+         <columns>
+            <TableColumn fx:id="cmProductName" editable="false" prefWidth="165.5999813079834" text="ProductName" />
+            <TableColumn fx:id="cmProductCode" editable="false" prefWidth="170.39996337890625" text="ProductCode" />
+            <TableColumn fx:id="cmSellingPrice" editable="false" minWidth="103.199951171875" prefWidth="148.0" text="Selling Price" />
+            <TableColumn fx:id="cmPurchasingPrice" editable="false" minWidth="62.39996337890625" prefWidth="146.4000244140625" text="Purchring Price" />
+            <TableColumn fx:id="cmQuantity" editable="false" prefWidth="154.39999389648438" text="Quantity" />
+            <TableColumn fx:id="cmProfit" editable="false" prefWidth="154.39999389648438" text="Profit" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TableView>
+      <HBox layoutX="28.0" layoutY="612.0" prefHeight="105.0" prefWidth="948.0" spacing="40.0" style="-fx-background-color: #4a4fda;">
+         <children>
+            <AnchorPane prefHeight="102.0" prefWidth="947.0">
+               <children>
+                  <Label fx:id="lblProfit" layoutX="612.0" layoutY="8.0" prefHeight="39.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Total Profits" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTotalProfits" editable="false" layoutX="835.0" layoutY="14.0" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-width: 0px0px2px0px; -fx-border-color: #4a4fda; -fx-text-fill: #ffffff;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblProfit1" layoutX="24.0" layoutY="8.0" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Value Of Bills" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProfit11" layoutX="24.0" layoutY="53.0" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: transparent;" text="Total Amounts Paid" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProfit111" layoutX="612.0" layoutY="53.0" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: transparent;" text="Total Remaining Amounts" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTotalRemaning" editable="false" layoutX="846.0" layoutY="51.0" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-width: 0px0px2px0px; -fx-border-color: #4a4fda; -fx-text-fill: #ffffff;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtValueOfBills" editable="false" layoutX="226.0" layoutY="14.0" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-width: 0px0px2px0px; -fx-border-color: #4a4fda; -fx-text-fill: #ffffff;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtTotalAmountPaid" editable="false" layoutX="232.0" layoutY="55.0" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-width: 0px0px2px0px; -fx-border-color: #4a4fda; -fx-text-fill: #ffffff;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
